@@ -15,7 +15,6 @@
         }
 
         //Konstruktør
-        //Default
         public Medlem() : base()
         {            
             _status = false;
@@ -24,6 +23,12 @@
         public Medlem(int id, string navn, string email, string telefon, bool status):  base(id, navn, email, telefon)
         {     
                         _status = status;
+        }
+
+        //tostring override
+        public override string ToString()
+        {
+            return $"{{{nameof(Status)}={Status.ToString()}, {nameof(Id)}={Id.ToString()}, {nameof(Navn)}={Navn}, {nameof(Email)}={Email}, {nameof(Telefon)}={Telefon}}}";
         }
     }
 }
