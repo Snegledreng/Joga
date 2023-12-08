@@ -1,20 +1,20 @@
 ﻿namespace Joga.model
 {
-    public class hold
+    public class Hold
     {
         //properties
         public int holdnummer {  get; set; }
         public string holdnavn { get; set; }
         public string holdbeskrivelse { get; set; }
-        public List<kunde> tilmeld { get; set; }
+        public List<Kunde> tilmeld { get; set; }
 
         //constructor
-        public hold()
+        public Hold()
         {
             holdnummer = 0;
             holdnavn = string.Empty;
             holdbeskrivelse = string.Empty;
-            tilmeld = new List<kunde>();
+            tilmeld = new List<Kunde>();
         }
 
         //tostring override

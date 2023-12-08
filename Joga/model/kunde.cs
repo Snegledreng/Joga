@@ -1,6 +1,6 @@
 ﻿namespace Joga.model
 {
-    public class kunde
+    public class Kunde
     {
         //properties
         public int Id { get; set; }
@@ -9,7 +9,7 @@
         public string Telefon { get; set; }
 
         //constructors
-        public kunde()
+        public Kunde()
         { 
             Id = 0;
             Navn = string.Empty;
@@ -17,7 +17,7 @@
             Telefon = string.Empty;
         }
 
-        public kunde(int id, string navn, string email, string telefon)
+        public Kunde(int id, string navn, string email, string telefon)
         {
             Id = id;
             Navn = navn;
