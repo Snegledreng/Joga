@@ -8,10 +8,33 @@ namespace Joga.services
         public List<Medlem> MedlemList { get; set; }
 
         //Konstruktør
-        public MedlemRepository()
+        public MedlemRepository(bool mockData = true)
         {
             MedlemList = new List<Medlem>();
+
+            if (mockData)
+            {
+                PopulateMedlemRepository();
+            }
+        }
+        private void PopulateMedlemRepository()
+        {
+            MedlemList.Clear();
+
+            MedlemList.Add(new Medlem(90, "ole", "mail@gmail.com", "88899921", true));
+            MedlemList.Add(new Medlem(2, "Ollie", "mail@hotmail.com", "12376532", false));
+            MedlemList.Add(new Medlem(3, "Bo", "mail@live.com", "77662244", true));
+            MedlemList.Add(new Medlem(4, "Erick", "ericssejeemail@gmail.com", "11992288", true));
+            MedlemList.Add(new Medlem(5, "Nanna", "bosslady@gmail.com", "77228844", false));
+        }
+
+        //metoder
+
+        public List<Medlem> HentAlleMedlemmer()
+        {
+            return new List<Medlem>(MedlemList);
         }
 
     }
+
 }

@@ -1,3 +1,5 @@
+using Joga.services;
+
 namespace Joga
 {
     public class Program
@@ -8,8 +10,10 @@ namespace Joga
 
             // Add services to the container.
             builder.Services.AddRazorPages();
+            builder.Services.AddSingleton<MedlemRepository>(new MedlemRepository(true));
 
             var app = builder.Build();
+
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
@@ -25,6 +29,7 @@ namespace Joga
             app.MapRazorPages();
 
             app.Run();
+
         }
     }
 }
