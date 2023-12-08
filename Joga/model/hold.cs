@@ -6,7 +6,7 @@
         public int holdnummer {  get; set; }
         public string holdnavn { get; set; }
         public string holdbeskrivelse { get; set; }
-        public List<Kunde> tilmeld { get; set; }
+        public List<Person> tilmeld { get; set; }
 
         //constructor
         public Hold()
@@ -14,7 +14,7 @@
             holdnummer = 0;
             holdnavn = string.Empty;
             holdbeskrivelse = string.Empty;
-            tilmeld = new List<Kunde>();
+            tilmeld = new List<Person>();
         }
 
         //tostring override
