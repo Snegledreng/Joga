@@ -11,6 +11,7 @@ namespace Joga
             // Add services to the container.
             builder.Services.AddRazorPages();
             builder.Services.AddSingleton<MedlemRepository>(new MedlemRepository(true));
+            builder.Services.AddSingleton<HoldRepository>(new HoldRepository(true));
 
             var app = builder.Build();
 

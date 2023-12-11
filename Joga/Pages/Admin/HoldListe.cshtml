@@ -1,0 +1,32 @@
+﻿@page
+@using Joga.model;
+@using Joga.services;
+@model Joga.Pages.Admin.HoldListeModel
+@{
+}
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Holdnummer</th>
+            <th>Holdnavn</th>
+            <th>Beskrivelse af hold</th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Hold h in Model.Hold)
+        {
+            <tr>
+                <td>@h.holdnummer</td>
+                <td>@h.holdnavn</td>
+                <td>@h.holdbeskrivelse</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        }
+    </tbody>
+</table>
