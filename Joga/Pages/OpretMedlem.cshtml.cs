@@ -34,8 +34,8 @@ namespace Joga.Pages
 
         public IActionResult OnPost()
         {
-            Medlem nyMedlem = new Medlem(NyId, NyNavn, NyEmail, NyTlf, true, NyNyhedsbrev);
-            MedlemRepository.TilføjMedlem(nyMedlem);
+            Medlem m = new Medlem(NyId, NyNavn, NyEmail, NyTlf, true, NyNyhedsbrev);
+            MedlemRepository.TilføjMedlem(m);
             return Page();
         }
     }
