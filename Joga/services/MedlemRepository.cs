@@ -35,6 +35,12 @@ namespace Joga.services
             return new List<Medlem>(MedlemList);
         }
 
+        public void TilføjMedlem(Medlem medlem)
+        {
+            MedlemList.Add(medlem);
+        }
+        
+
     }
 
 }

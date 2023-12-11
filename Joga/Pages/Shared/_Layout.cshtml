@@ -39,16 +39,16 @@
         </style>
     </header>
     @* Navbar virker ikke fra medlemsliste tilbage til andre sider. *@
-        <nav>
-            <a href="Admin">Admin</a>
-            <a href="Medlem">Medlem</a>
-            <a href="Priser">Priser</a>
-            <a href="Hold">Hold</a>
-            <a href="About">About</a>
-            
-            
-            
-        </nav>
+    <nav>
+        <a asp-page="/Admin/index">Admin</a>
+        <a asp-page="/Medlem">Medlem</a>
+        <a asp-page="/Priser">Priser</a>
+        <a asp-page="/Hold">Hold</a>
+        <a asp-page="/About">About</a>
+
+
+
+    </nav>
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
