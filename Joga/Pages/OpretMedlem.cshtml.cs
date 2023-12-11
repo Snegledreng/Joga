@@ -1,3 +1,4 @@
+using Joga.model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -23,6 +24,13 @@ namespace Joga.Pages
 
         public void OnGet()
         {
+        }
+
+        public IActionResult OnPost()
+        {
+            Medlem nyMedlem = new Medlem(NyId, NyNavn, NyEmail, NyTlf, true, NyNyhedsbrev);
+            MedlemList.TilføjMedlem(nyMedlem);
+            return Page();
         }
     }
 }
