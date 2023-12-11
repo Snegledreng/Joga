@@ -21,11 +21,11 @@ namespace Joga.services
         {
             MedlemList.Clear();
 
-            MedlemList.Add(new Medlem(90, "ole", "mail@gmail.com", "88899921", true));
-            MedlemList.Add(new Medlem(2, "Ollie", "mail@hotmail.com", "12376532", false));
-            MedlemList.Add(new Medlem(3, "Bo", "mail@live.com", "77662244", true));
-            MedlemList.Add(new Medlem(4, "Erick", "ericssejeemail@gmail.com", "11992288", true));
-            MedlemList.Add(new Medlem(5, "Nanna", "bosslady@gmail.com", "77228844", false));
+            MedlemList.Add(new Medlem(90, "ole", "mail@gmail.com", "88899921", true, true));
+            MedlemList.Add(new Medlem(2, "Ollie", "mail@hotmail.com", "12376532", false, false));
+            MedlemList.Add(new Medlem(3, "Bo", "mail@live.com", "77662244", true, false));
+            MedlemList.Add(new Medlem(4, "Erick", "ericssejeemail@gmail.com", "11992288", true, true));
+            MedlemList.Add(new Medlem(5, "Nanna", "bosslady@gmail.com", "77228844", false, false));
         }
 
         //metoder
