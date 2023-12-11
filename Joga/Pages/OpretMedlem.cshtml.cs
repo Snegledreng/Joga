@@ -1,11 +1,17 @@
 using Joga.model;
+using Joga.services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Joga.Pages
 {
     public class OpretMedlemModel : PageModel
+
+        
     {
+        public MedlemRepository MedlemRepository { get; set; }
+
+
         [BindProperty]
         public int NyId { get; set; }
 
@@ -29,7 +35,7 @@ namespace Joga.Pages
         public IActionResult OnPost()
         {
             Medlem nyMedlem = new Medlem(NyId, NyNavn, NyEmail, NyTlf, true, NyNyhedsbrev);
-            MedlemList.TilføjMedlem(nyMedlem);
+            MedlemRepository.TilføjMedlem(nyMedlem);
             return Page();
         }
     }
