@@ -21,6 +21,8 @@
             this.holdbeskrivelse = holdbeskrivelse;
         }
 
+       
+
 
         //tostring override
         public override string ToString()

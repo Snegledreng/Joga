@@ -40,6 +40,15 @@ namespace Joga.services
             HoldList.Add(hold);
         }
 
+        public Hold HentHold(int holdnummer)
+        {
+            return HoldList[holdnummer];
+        }
+
+        public void SletHold(int holdnummer)
+        {
+            HoldList.Remove(holdnummer);
+        }
 
     }
 }

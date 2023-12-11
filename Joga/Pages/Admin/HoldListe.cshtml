@@ -4,6 +4,7 @@
 @model Joga.Pages.Admin.HoldListeModel
 @{
 }
+
 <table class="table table-hover">
     <thead>
         <tr>
@@ -13,9 +14,10 @@
             <th></th>
             <th></th>
             <th></th>
-            <th></th>
+            <th>Slet kunde</th>
         </tr>
     </thead>
+    <form method="post">
     <tbody>
         @foreach (Hold h in Model.Hold)
         {
@@ -26,7 +28,9 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td> <a asp-page-handler="Deletehold" asp-route-nummer="@h.holdnummer"> Slet </a> </td>
             </tr>
         }
     </tbody>
+    </form>
 </table>
