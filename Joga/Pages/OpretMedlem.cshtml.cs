@@ -18,9 +18,6 @@ namespace Joga.Pages
         public string NyTlf { get; set; }
 
         [BindProperty]
-        public bool NyStatus { get; set; }
-
-        [BindProperty]
         public bool NyNyhedsbrev { get; set; }
 
 
