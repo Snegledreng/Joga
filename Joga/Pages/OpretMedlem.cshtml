@@ -3,3 +3,37 @@
 @{
 }
 
+
+<h1> Opret dig som medlem </h1>
+
+<form method="post">
+    <div class="form-group">
+        <label>Medlems Id</label><br />
+        <input class="form-control" asp-for="@Model.NyId" />
+        <span asp-validation-for="@Model.NyId" class="text-danger"></span><br />
+
+        <label>Medlems Navn</label><br />
+        <input class="form-control" asp-for="@Model.NyNavn" />
+        <span asp-validation-for="@Model.NyNavn" class="text-danger"></span><br />
+
+        <label>Medlems email</label><br />
+        <input class="form-control" asp-for="@Model.NyEmail" />
+        <span asp-validation-for="@Model.NyEmail" class="text-danger"></span><br />
+
+        <label>Medlems tlf</label><br />
+        <input class="form-control" asp-for="@Model.NyTlf" />
+        <span asp-validation-for="@Model.NyTlf" class="text-danger"></span><br />
+
+        <label>Medlems status</label><br />
+        <input type="checkbox" asp-for="@Model.NyStatus" />
+        <span asp-validation-for="@Model.NyStatus" class="text-danger"></span><br />
+
+        <label>Medlems Nyhedsbrev</label><br />
+        <input class="form-control" asp-for="@Model.NyNyhedsbrev" />
+        <span asp-validation-for="@Model.NyNyhedsbrev" class="text-danger"></span><br />
+
+        <br />
+
+        <input type="submit" value="Opret som medlem" />
+    </div>
+</form> 
