@@ -9,7 +9,11 @@ namespace Joga.Pages
 
         
     {
-        public MedlemRepository MedlemRepository { get; set; }
+        private MedlemRepository _repo;
+        public OpretMedlemModel(MedlemRepository repo)
+        {
+            _repo = repo;
+        }
 
 
         [BindProperty]
@@ -35,8 +39,8 @@ namespace Joga.Pages
         public IActionResult OnPost()
         {
             Medlem m = new Medlem(NyId, NyNavn, NyEmail, NyTlf, true, NyNyhedsbrev);
-            MedlemRepository.TilføjMedlem(m);
-            return Page();
+            _repo.TilføjMedlem(m);
+            return RedirectToPage("Admin/Medlemsliste");
         }
     }
 }
