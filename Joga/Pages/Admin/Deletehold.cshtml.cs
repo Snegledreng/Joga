@@ -18,7 +18,7 @@ namespace Joga.Pages.Admin
         public IActionResult OnGet(int nummer)
         {
             Hold = _repo.HentAlleHold();
-            _repo.SletHold(nummer);
+            //_repo.SletHold(nummer);
             return RedirectToPage("Admin/Holdliste");
             
         }
