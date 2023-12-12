@@ -18,5 +18,14 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    background: #FFCC66 url("joga 1.jpg") repeat scroll top center;
+    background-size: 100% 100%;
+    margin-bottom: 60px;
+    background-repeat: no-repeat;
+}
+
+.container {
+    color: whitesmoke;
+    text-align: left;
+    margin-left: 60px;
 }

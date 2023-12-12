@@ -8,7 +8,7 @@ namespace Joga.services
         public List<Hold> HoldList { get; set; }
 
         //Konstruktør
-        public HoldRepository(bool mockData = true)
+        public HoldRepository(bool mockData = false)
         {
             HoldList = new List<Hold>();
 
@@ -21,11 +21,11 @@ namespace Joga.services
         {
             HoldList.Clear();
 
-            HoldList.Add(new Hold(1, "Hot yoga", "Beskrivelse af hot yoga"));
-            HoldList.Add(new Hold(2, "Power yoga", "Beskrivelse af power yoga"));
-            HoldList.Add(new Hold(3, "Kedelig yoga", "Beskrivelse af kedelig yoga"));
-            HoldList.Add(new Hold(4, "Spændende yoga", "Beskrivelse af spændende yoga"));
-            HoldList.Add(new Hold(5, "Almindelig yoga", "Beskrivelse af almindelig yoga"));
+            HoldList.Add(new Hold(1, "Hot yoga", "Beskrivelse af hot yoga", "HotYoga"));
+            HoldList.Add(new Hold(2, "Power yoga", "Beskrivelse af power yoga", "PowerYoga"));
+            HoldList.Add(new Hold(3, "Kedelig yoga", "Beskrivelse af kedelig yoga", "KedeligYoga"));
+            HoldList.Add(new Hold(4, "Spændende yoga", "Beskrivelse af spændende yoga", "SpændendeYoga"));
+            HoldList.Add(new Hold(5, "Almindelig yoga", "Beskrivelse af almindelig yoga", "AlmindeligYoga"));
         }
 
         //metoder
@@ -47,6 +47,7 @@ namespace Joga.services
         }
 
         public void SletHold(int holdnummer) => HoldList.Remove(HentHold(holdnummer));
+
 
     }
 }
