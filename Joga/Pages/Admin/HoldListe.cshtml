@@ -11,7 +11,7 @@
             <th>Holdnummer</th>
             <th>Holdnavn</th>
             <th>Beskrivelse af hold</th>
-            <th></th>
+            <th>Antal Tilmeldte</th>
             <th></th>
             <th></th>
             <th>Slet kunde</th>
@@ -22,13 +22,13 @@
         @foreach (Hold h in Model.Hold)
         {
             <tr>
-                <td>@h.holdnummer</td>
-                <td>@h.holdnavn</td>
-                <td>@h.holdbeskrivelse</td>
+                <td>@h.holdNummer</td>
+                <td>@h.holdNavn</td>
+                <td>@h.holdBeskrivelse</td>
+                <td>@h.holdMedlemListe.Count</td>
                 <td></td>
                 <td></td>
-                <td></td>
-                <td> <a asp-page="Deletehold" asp-route-deleteholdnummer="@h.holdnummer"> Slet </a> </td>
+                <td> <a asp-page="Deletehold" asp-route-deleteholdnummer="@h.holdNummer"> Slet </a> </td>
             </tr>
         }
     </tbody>

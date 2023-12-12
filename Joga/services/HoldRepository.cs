@@ -36,18 +36,14 @@ namespace Joga.services
 
         public Hold HentHold(int holdnummer)
         {
-
             foreach (Hold hold in HoldList)
             {
-
-                if (hold.holdnummer == holdnummer)
+                if (hold.holdNummer == holdnummer)
                 {
                     return hold;
                 }
-
             }
             throw new Exception();
-
         }
 
         public void SletHold(int holdnummer) => HoldList.Remove(HentHold(holdnummer));
