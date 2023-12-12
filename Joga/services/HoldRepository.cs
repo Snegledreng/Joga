@@ -14,10 +14,10 @@ namespace Joga.services
 
             if (mockData)
             {
-                PopulateMedlemRepository();
+                PopulateHoldRepository();
             }
         }
-        private void PopulateMedlemRepository()
+        private void PopulateHoldRepository()
         {
             HoldList.Clear();
 
@@ -30,25 +30,27 @@ namespace Joga.services
 
         //metoder
 
-        public List<Hold> HentAlleHold()
+        public List<Hold> HentAlleHold() => new List<Hold>(HoldList);
+
+        public void TilføjHold(Hold hold) => HoldList.Add(hold);
+
+        public Hold HentHold(int holdnummer)
         {
-            return new List<Hold>(HoldList);
+
+            foreach (Hold hold in HoldList)
+            {
+
+                if (hold.holdnummer == holdnummer)
+                {
+                    return hold;
+                }
+
+            }
+            throw new Exception();
+
         }
 
-        public void TilføjHold(Hold hold)
-        {
-            HoldList.Add(hold);
-        }
-
-        //public Hold HentHold(int holdnummer)
-        //{
-        //    return HoldList[holdnummer];
-        //}
-
-        //public void SletHold(int holdnummer)
-        //{
-        //    HoldList.Remove(holdnummer);
-        //}
+        public void SletHold(int holdnummer) => HoldList.Remove(HentHold(holdnummer));
 
     }
 }

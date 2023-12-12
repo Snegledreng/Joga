@@ -15,11 +15,11 @@ namespace Joga.Pages.Admin
 
         //properties
         public List<Hold> Hold { get; set; }
-        public IActionResult OnGet(int nummer)
+        public IActionResult OnGet(int deleteholdnummer)
         {
             Hold = _repo.HentAlleHold();
-            //_repo.SletHold(nummer);
-            return RedirectToPage("Admin/Holdliste");
+            _repo.SletHold(deleteholdnummer);
+            return RedirectToPage("Holdliste");
             
         }
     }
