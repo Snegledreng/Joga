@@ -4,36 +4,36 @@
 @model Joga.Pages.HoldListeModel
 @{
 }
+<form method="post">
 <table class="table table-hover">
     <thead>
         <tr>
             <th>Holdnummer</th>
             <th>Holdnavn</th>
             <th>Beskrivelse af hold</th>
+            <th>Se tilmeldte til hold</th>
             <th></th>
             <th></th>
-            <th></th>
-            <th></th>
+            <th><label>Indtast medlemsnummer</label><input class="form-control" asp-for="@Model.MedlemsId" /></th>
         </tr>
     </thead>
 
     <tbody>
-        <form method="post">
+
+
         @foreach (Hold h in Model.Hold)
         {
             <tr>
                 <td>@h.holdNummer</td>
                 <td>@h.holdNavn</td>
                 <td>@h.holdBeskrivelse</td>
+                <td> <a asp-page="@h.holdUnderside"> Se hold </a> </td>
                 <td></td>
                 <td></td>
-                <td></td>
-                <td>
-                    <input class="form-control" asp-for="@Model.MedlemsId" /><br />
-                </td>
+                <td><input type="submit" class="btn" value="Tilmeld" style="color:blue" asp-page-handler="Tilmeld"/></td>
             </tr>
         }
-        </form>
     </tbody>
 
 </table>
+</form>

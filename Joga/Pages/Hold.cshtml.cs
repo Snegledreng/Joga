@@ -13,11 +13,17 @@ namespace Joga.Pages
             _repo = repo;
         }
 
+        public Medlem Medlem { get; set; }
+        public Hold Hold2 { get; set; }
+
         //properties
         public List<Hold> Hold { get; set; }
 
         [BindProperty]
         public int MedlemsId { get; set; }
+
+        [BindProperty]
+        public Hold Tilmeld { get; set; }
         
         //onget funktioner
         public void OnGet()
@@ -26,9 +32,9 @@ namespace Joga.Pages
         }
 
         //onpost funktioner
-        //public IActionResult OnPost()
+        //public IActionResult OnPostTilmeld(MedlemsId)
         //{
-
+        //    Tilmeld.Add(MedlemRepository.HentMedlem(MedlemsId));
         //}
 
     }
