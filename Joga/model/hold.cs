@@ -24,6 +24,8 @@
             holdMedlemListe = new List<Medlem>(0);
         }
 
+
+
         //tostring override
         public override string ToString()
         {

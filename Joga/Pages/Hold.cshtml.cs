@@ -15,11 +15,21 @@ namespace Joga.Pages
 
         //properties
         public List<Hold> Hold { get; set; }
+
+        [BindProperty]
+        public int MedlemsId { get; set; }
+        
+        //onget funktioner
         public void OnGet()
         {
             Hold = _repo.HentAlleHold();
         }
 
+        //onpost funktioner
+        //public IActionResult OnPost()
+        //{
+
+        //}
 
     }
 }

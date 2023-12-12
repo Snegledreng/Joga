@@ -8,7 +8,7 @@ namespace Joga.services
         public List<Hold> HoldList { get; set; }
 
         //Konstruktør
-        public HoldRepository(bool mockData = true)
+        public HoldRepository(bool mockData = false)
         {
             HoldList = new List<Hold>();
 
@@ -47,6 +47,7 @@ namespace Joga.services
         }
 
         public void SletHold(int holdnummer) => HoldList.Remove(HentHold(holdnummer));
+
 
     }
 }

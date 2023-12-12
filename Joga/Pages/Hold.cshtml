@@ -18,6 +18,7 @@
     </thead>
 
     <tbody>
+        <form method="post">
         @foreach (Hold h in Model.Hold)
         {
             <tr>
@@ -27,9 +28,12 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
+                <td>
+                    <input class="form-control" asp-for="@Model.MedlemsId" /><br />
+                </td>
             </tr>
         }
+        </form>
     </tbody>
 
 </table>

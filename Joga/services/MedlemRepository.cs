@@ -39,8 +39,18 @@ namespace Joga.services
         {
             MedlemList.Add(medlem);
         }
-        
 
+        public Medlem HentMedlem(int medlemnummer)
+        {
+            foreach (Medlem medlem in MedlemList)
+            {
+                if (medlem.Id == medlemnummer)
+                {
+                    return medlem;
+                }
+            }
+            throw new Exception();
+        }
     }
 
 }
