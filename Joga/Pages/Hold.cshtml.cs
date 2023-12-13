@@ -1,20 +1,21 @@
 using Joga.model;
+using Joga.Pages.Admin;
 using Joga.services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Joga.Pages
 {
-    public class HoldListeModel : PageModel
+    public class HoldModel : PageModel
     {
         private HoldRepository _repo;
-        public HoldListeModel(HoldRepository repo)
+        private MedlemRepository _repo2;
+        public HoldModel(HoldRepository repo, MedlemRepository repo2)
         {
             _repo = repo;
+            _repo2 = repo2;
         }
 
-        public Medlem Medlem { get; set; }
-        public Hold Hold2 { get; set; }
 
         //properties
         public List<Hold> Hold { get; set; }
@@ -23,8 +24,8 @@ namespace Joga.Pages
         public int MedlemsId { get; set; }
 
         [BindProperty]
-        public Hold Tilmeld { get; set; }
-        
+        public List<Medlem> HoldMedlemsListe { get; set; }
+
         //onget funktioner
         public void OnGet()
         {
@@ -32,10 +33,21 @@ namespace Joga.Pages
         }
 
         //onpost funktioner
-        //public IActionResult OnPostTilmeld(MedlemsId)
-        //{
-        //    Tilmeld.Add(MedlemRepository.HentMedlem(MedlemsId));
-        //}
+        public IActionResult OnPostTilmeld(int holdNummer)
+        {
+            try
+            {
+                Hold yogaHold = _repo.HentHold(holdNummer);
+                yogaHold.holdMedlemListe.Add(_repo2.HentMedlem(MedlemsId));
+                Hold = _repo.HentAlleHold();
+
+                return Page();
+            }
+            catch 
+            {
+                throw new Exception();
+            }
+        }
 
     }
 }

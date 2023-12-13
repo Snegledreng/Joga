@@ -1,7 +1,7 @@
 ﻿@page
 @using Joga.model
 @using Joga.services
-@model Joga.Pages.HoldListeModel
+@model Joga.Pages.HoldModel
 @{
 }
 <form method="post">
@@ -30,7 +30,7 @@
                 <td> <a asp-page="@h.holdUnderside"> Se hold </a> </td>
                 <td></td>
                 <td></td>
-                <td><input type="submit" class="btn" value="Tilmeld" style="color:blue" asp-page-handler="Tilmeld"/></td>
+                <td><input type="submit" class="btn" value="Tilmeld" style="color:blue" asp-route-HoldNummer="@h.holdNummer" asp-page-handler="Tilmeld"/></td>
             </tr>
         }
     </tbody>

@@ -37,5 +37,6 @@
         {
             return $"{{{nameof(Status)}={Status.ToString()}, {nameof(Id)}={Id.ToString()}, {nameof(Navn)}={Navn}, {nameof(Email)}={Email}, {nameof(Telefon)}={Telefon}}}";
         }
+
     }
 }
