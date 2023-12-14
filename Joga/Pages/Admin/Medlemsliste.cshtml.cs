@@ -7,8 +7,8 @@ namespace Joga.Pages.Admin
 {
     public class MedlemslisteModel : PageModel
     {
-        private MedlemRepository _repo;
-        public MedlemslisteModel(MedlemRepository repo)
+        private IMedlemRepository _repo;
+        public MedlemslisteModel(IMedlemRepository repo)
         {
             _repo = repo;
         }

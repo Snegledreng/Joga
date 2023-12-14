@@ -7,8 +7,8 @@ namespace Joga.Pages.Admin
 {
     public class HoldListeModel : PageModel
     {
-        private HoldRepository _repo;
-        public HoldListeModel(HoldRepository repo)
+        private IHoldRepository _repo;
+        public HoldListeModel(IHoldRepository repo)
         {
             _repo = repo;
         }

@@ -40,7 +40,7 @@ namespace Joga.Pages
         {
             Medlem m = new Medlem(NyId, NyNavn, NyEmail, NyTlf, true, NyNyhedsbrev);
             _repo.TilføjMedlem(m);
-            return RedirectToPage("Admin/Medlemsliste");
+            return RedirectToPage("/Admin/Medlemsliste");
         }
     }
 }

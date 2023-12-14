@@ -52,7 +52,9 @@ namespace Joga.services
             if (File.Exists(FILENAME))
             {
                 StreamReader sr = File.OpenText(FILENAME);
-                return JsonSerializer.Deserialize <List<Medlem>> (sr.ReadToEnd());
+                List<Medlem> list = JsonSerializer.Deserialize<List<Medlem>>(sr.ReadToEnd());
+                sr.Close();
+                return list;
             }
             else
             {

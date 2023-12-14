@@ -7,8 +7,8 @@ namespace Joga.Pages.Admin
 {
     public class DeleteholdModel : PageModel
     {
-        private HoldRepository _repo;
-        public DeleteholdModel(HoldRepository repo)
+        private IHoldRepository _repo;
+        public DeleteholdModel(IHoldRepository repo)
         {
             _repo = repo;
         }
