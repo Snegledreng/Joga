@@ -8,24 +8,9 @@ namespace Joga.services
         public List<Hold> HoldList { get; set; }
 
         //Konstruktør
-        public HoldRepository(bool mockData = false)
+        public HoldRepository()
         {
             HoldList = new List<Hold>();
-
-            if (mockData)
-            {
-                PopulateHoldRepository();
-            }
-        }
-        private void PopulateHoldRepository()
-        {
-            HoldList.Clear();
-
-            HoldList.Add(new Hold(1, "Hot yoga", "Beskrivelse af hot yoga", "HotYoga"));
-            HoldList.Add(new Hold(2, "Power yoga", "Beskrivelse af power yoga", "PowerYoga"));
-            HoldList.Add(new Hold(3, "Kedelig yoga", "Beskrivelse af kedelig yoga", "KedeligYoga"));
-            HoldList.Add(new Hold(4, "Spændende yoga", "Beskrivelse af spændende yoga", "SpændendeYoga"));
-            HoldList.Add(new Hold(5, "Almindelig yoga", "Beskrivelse af almindelig yoga", "AlmindeligYoga"));
         }
 
         //metoder
