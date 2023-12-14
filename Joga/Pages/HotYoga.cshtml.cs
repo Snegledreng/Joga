@@ -7,8 +7,8 @@ namespace Joga.Pages
 {
     public class HotYogaModel : PageModel
     {
-        private HoldRepository _repo;
-        public HotYogaModel(HoldRepository repo)
+        private IHoldRepository _repo;
+        public HotYogaModel(IHoldRepository repo)
         {
             _repo = repo;
         }

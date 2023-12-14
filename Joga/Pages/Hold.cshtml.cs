@@ -8,9 +8,9 @@ namespace Joga.Pages
 {
     public class HoldModel : PageModel
     {
-        private HoldRepository _repo;
-        private MedlemRepository _repo2;
-        public HoldModel(HoldRepository repo, MedlemRepository repo2)
+        private IHoldRepository _repo;
+        private IMedlemRepository _repo2;
+        public HoldModel(IHoldRepository repo,  IMedlemRepository repo2)
         {
             _repo = repo;
             _repo2 = repo2;

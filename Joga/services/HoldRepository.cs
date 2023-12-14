@@ -2,7 +2,7 @@
 
 namespace Joga.services
 {
-    public class HoldRepository
+    public class HoldRepository : IHoldRepository
     {
         //Instansfelt og properties(Get/Set)
         public List<Hold> HoldList { get; set; }

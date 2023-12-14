@@ -9,8 +9,8 @@ namespace Joga.Pages
 
         
     {
-        private MedlemRepository _repo;
-        public OpretMedlemModel(MedlemRepository repo)
+        private IMedlemRepository _repo;
+        public OpretMedlemModel(IMedlemRepository repo)
         {
             _repo = repo;
         }

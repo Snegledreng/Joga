@@ -7,8 +7,8 @@ namespace Joga.Pages
 {
     public class KedeligYogaModel : PageModel
     {
-        private HoldRepository _repo;
-        public KedeligYogaModel(HoldRepository repo)
+        private IHoldRepository _repo;
+        public KedeligYogaModel(IHoldRepository repo)
         {
             _repo = repo;
         }
