@@ -2,6 +2,7 @@ using Joga.model;
 using Joga.services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.ComponentModel.DataAnnotations;
 
 namespace Joga.Pages
 {
@@ -20,11 +21,17 @@ namespace Joga.Pages
         public int NyId { get; set; }
 
         [BindProperty]
+        [Required]
         public string NyNavn { get; set; }
 
+        [DataType(DataType.EmailAddress)]
+        [Required]
         [BindProperty]
         public string NyEmail { get; set; }
 
+        [DataType(DataType.PhoneNumber)]
+        [StringLength(8)]
+        [Required]
         [BindProperty]
         public string NyTlf { get; set; }
 

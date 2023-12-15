@@ -19,6 +19,7 @@ namespace Joga.Pages
 
         //properties
         public List<Hold> Hold { get; set; }
+        public string ErrorMessage { get; set; }
 
         [BindProperty]
         public int MedlemsId { get; set; }
@@ -30,6 +31,7 @@ namespace Joga.Pages
         public void OnGet()
         {
             Hold = _repo.HentAlleHold();
+            ErrorMessage = string.Empty;
         }
 
         //onpost funktioner
@@ -39,15 +41,14 @@ namespace Joga.Pages
             {
                 Hold yogaHold = _repo.HentHold(holdNummer);
                 yogaHold.holdMedlemListe.Add(_repo2.HentMedlem(MedlemsId));
-                Hold = _repo.HentAlleHold();
-
-                return Page();
             }
-            catch 
+            catch (Exception e) 
             {
-                throw new Exception();
+                ErrorMessage = e.Message;
             }
-        }
+            Hold = _repo.HentAlleHold();
+            return Page();
 
+        }
     }
 }

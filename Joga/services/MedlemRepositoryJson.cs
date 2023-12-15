@@ -41,7 +41,7 @@ namespace Joga.services
                     return medlem;
                 }
             }
-            throw new Exception();
+            throw new Exception($"Medlemsnummer {medlemnummer} findes ikke");
         }
 
         //Læs og skriv via Json
