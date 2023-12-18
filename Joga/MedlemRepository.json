@@ -1,18 +1,1 @@
-[
-  {
-    "Status": true,
-    "Nyhedsbrev": true,
-    "Id": 1,
-    "Navn": "S\u00F8ren Hansen",
-    "Email": "medlem@medlem.dk",
-    "Telefon": "12345678"
-  },
-  {
-    "Status": true,
-    "Nyhedsbrev": true,
-    "Id": 2,
-    "Navn": "Thomas",
-    "Email": "thst@kp.dk",
-    "Telefon": "51020506"
-  }
-]
+[{"Status":true,"Nyhedsbrev":true,"Id":1,"Navn":"S\u00F8ren Hansen","Email":"medlem@medlem.dk","Telefon":"12345678"},{"Status":true,"Nyhedsbrev":true,"Id":2,"Navn":"Thomas","Email":"thst@kp.dk","Telefon":"51020506"},{"Status":true,"Nyhedsbrev":true,"Id":1,"Navn":"ole","Email":"dsa@fff.dk","Telefon":"33333333"},{"Status":true,"Nyhedsbrev":true,"Id":4,"Navn":"James Jameson","Email":"ole@kk.dk","Telefon":"22222"}]
